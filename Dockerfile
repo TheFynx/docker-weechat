@@ -23,4 +23,4 @@ USER weechat
 
 EXPOSE 9001
 
-CMD ["screen weechat"]
+CMD ["weechat"]
