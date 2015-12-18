@@ -8,14 +8,19 @@ RUN apk add --update\
     && rm -rf /var/cache/apk/*
 
 ENV LANG C.UTF-8
+ENV HOME /weechat
 
 #Create user to run screen/weechat
-RUN mkdir -p /.weechat
+RUN mkdir -p $HOME/.weechat\
+    && addgroup weechat\
+    && adduser -h $HOME -D -s /bin/bash -G weechat weechat\
+    && chown -R weechat:weechat $HOME
 
 #Expose for persistance
-VOLUME /.weechat
+VOLUME /weechat/.weechat
 
-WORKDIR /
+WORKDIR $HOME
+USER weechat
 
 EXPOSE 9001
 
