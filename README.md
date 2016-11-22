@@ -9,15 +9,17 @@ Weechat in alpine
 
 # Usage
 
+Remove `-d` if you want to directly interact with weechat itself.
+
 Quick Run
 ```
-docker run thefynx/alpine-weechat
+docker run -it -d thefynx/alpine-weechat
 ```
 Run with relay port
 ```
-docker run -d -p 9001:9001 thefynx/alpine-weechat
+docker run -it -d -p 9001:9001 thefynx/alpine-weechat
 ```
 Run with relay port and .weechat mount
 ```
-docker run -d -p 9001:9001 -v /path/to/.weechat:/weechat/.weechat thefynx/alpine-weechat
+docker run -it -d -p 9001:9001 -v /path/to/.weechat:/weechat/.weechat thefynx/alpine-weechat
 ```
