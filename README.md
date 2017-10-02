@@ -4,7 +4,14 @@ alpine-weechat
 Weechat in alpine
 
 # Build Info
-* Image: Alpine Latest
+## Master
+* Tage: Master or Stable
+* Image: alpine:latest
+* Relay Port: 9001
+
+## Edge
+* Tage:Edge
+* Image: alpine:edge
 * Relay Port: 9001
 
 # Usage
