@@ -4,6 +4,8 @@ MAINTAINER Levi Smith <levi@fynx.me>
 RUN apk add --update\
     weechat\
     python\
+    weechat-python\
+    weechat-perl\
     bash\
     && rm -rf /var/cache/apk/*
 
